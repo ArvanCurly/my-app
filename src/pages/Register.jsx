@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
 
@@ -9,22 +10,30 @@ const Container = styled.div`
         ),
          url("https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
     background-repeat: no-repeat;
-background-size: cover;
+    background-size: cover;
     object-fit: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    ${mobile({
+        backgroundPosition:"center",
+    })}
+
 
 `;
 const Wrapper = styled.div`
     width:40%;
     padding: 20px;
     background-color: white;
+    ${mobile({
+        width:"75%",
+    })}
 
 `;
 const Form = styled.form`
     display: flex;
     flex-wrap: wrap;
+
 
 `;
 const Input = styled.input`

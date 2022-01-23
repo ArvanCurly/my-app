@@ -4,22 +4,33 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { mobile } from "../responsive";
 
 const Wrapper = styled.div`
     display: flex;
     padding: 20px;
+    ${mobile({
+        flexDirection:"column",padding:"10px"
+    })}
 `;
 
 const ImageContainer = styled.div`
     flex:1;
+    
 `;
 const Image = styled.img`
     height:90vh;
     object-fit: cover;
     width:600px;
+    ${mobile({
+        height:"40vh",width:"100%"
+    })}
 `;
 const InfoContainer = styled.div`
 padding: 0px 50px;
+${mobile({
+        padding:"10px",
+    })}
 `;
 const Title = styled.h1`
 font-weight: 200;
@@ -38,6 +49,9 @@ const FilterContainer = styled.div`
     justify-content: space-between;
     width:50%;
     margin: 20px 0px;
+    ${mobile({
+        width:"100%",
+    })}
 `;
 const Filter = styled.div`
 display:flex;
@@ -66,6 +80,9 @@ display: flex;
 width:50%;
 justify-content: space-between;
 margin: 20px 0px;
+${mobile({
+        width:"100%",
+    })}
 `;
 const AmountContainer = styled.div`
 
